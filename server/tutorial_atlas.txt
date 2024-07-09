@@ -1,0 +1,10 @@
+1.Mongodb atlas login
+2.top left -> dropdown -> new project
+3.enter project name and create project
+4.click build database 
+5.choose free plan and create
+6.save username and password in txt file ->then click create
+7.click finish and close
+8.click connect.
+9.click compass.
+10.copy connection string and replace <password> with password you save before
