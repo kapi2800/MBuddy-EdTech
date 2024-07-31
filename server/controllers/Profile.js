@@ -96,7 +96,7 @@ exports.deleteAccount = async (req, res) => {
 
 exports.getAllUserDetails = async (req, res) => {
   try {
-    const id = req.user.id
+    const id = req.user.id;
     const userDetails = await User.findById(id)
       .populate("additionalDetails")
       .exec()
@@ -116,7 +116,7 @@ exports.getAllUserDetails = async (req, res) => {
 
 exports.updateDisplayPicture = async (req, res) => {
   try {
-    const displayPicture = req.files.displayPicture
+    const displayPicture = req.files.displayPicture;
     const userId = req.user.id;
     const image = await uploadImageToCloudinary(
       displayPicture,

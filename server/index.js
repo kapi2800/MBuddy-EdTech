@@ -22,12 +22,20 @@ database.connect();
 //middlewares
 app.use(express.json());
 app.use(cookieParser());
+const allowedOrigins = ['http://localhost:3000', 'https://study-notion-ed-tech-rho.vercel.app/'];
+
 app.use(
-	cors({
-		origin:"http://localhost:3000",
-		credentials:true,
-	})
-)
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    credentials: true,
+  })
+);
 
 app.use(
 	fileUpload({

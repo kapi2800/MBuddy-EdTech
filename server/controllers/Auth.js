@@ -9,6 +9,7 @@ const Profile=require("../models/Profile");
 require("dotenv").config();
 
 
+
 exports.sendotp = async (req, res) => {
     try {
         // fetch email from request body
@@ -58,7 +59,7 @@ exports.sendotp = async (req, res) => {
         console.log("otp Body : ",otpBody);
 
         // return response
-        res.status(200).json({
+       return res.status(200).json({
             success: true,
             message: "OTP sent successfully. ",
         });
@@ -210,7 +211,7 @@ exports.login = async (req, res) => {
                 expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
                 httpOnly: true,
             }
-            res.cookie("token", token, options).status(200).json({
+            return res.cookie("token", token, options).status(200).json({
                 success: true,
                 token,
                 user,
