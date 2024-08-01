@@ -25,7 +25,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin:"http://localhost:3000/",
+    origin:"https://studynotion-edtech-tqx7.onrender.com/",
     credentials: true,
   })
 );
