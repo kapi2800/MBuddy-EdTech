@@ -27,7 +27,7 @@ exports.resetPasswordToken = async (req, res) => {
             { new: true });
                 
         // create url
-        const url = `http://localhost:3000/update-password/${token}`;
+        const url = `https://studynotion-edtech-tqx7.onrender.com/update-password/${token}`;
         // send mail containing the url
         await mailsender(email,
             'Password reset Link',
