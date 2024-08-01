@@ -25,8 +25,9 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin:"https://studynotion-edtech-tqx7.onrender.com/",
+    origin:"https://studynotion-edtech-tqx7.onrender.com",
     credentials: true,
+    optionsSuccessStatus: 200 
   })
 );
 
