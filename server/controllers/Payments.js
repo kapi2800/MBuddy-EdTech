@@ -60,7 +60,7 @@ exports.capturePayment = async (req, res) => {
     // Initiate the payment using Razorpay
     const paymentResponse = await instance.orders.create(options)
     console.log(paymentResponse)
-    res.json({
+    return res.json({
       success: true,
       message: paymentResponse,
     })
