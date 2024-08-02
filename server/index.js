@@ -14,6 +14,7 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 const PORT = process.env.PORT || 4000;
+const FRONTEND_URL=process.env.FRONTEND_URL;
 
 //database connect
 database.connect();
@@ -25,7 +26,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin:"https://studynotion-edtech-tqx7.onrender.com",
+    origin:FRONTEND_URL,
     credentials: true,
     optionsSuccessStatus: 200 
   })
