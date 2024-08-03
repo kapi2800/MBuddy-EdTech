@@ -1,4 +1,7 @@
-const BASE_URL = "https://studynotion-edtech-backend-zu5u.onrender.com/api/v1"
+
+
+const BASE_URL = `${process.env.REACT_APP_BACKEND_URL}/api/v1`
+console.log("base url",BASE_URL)
 
 // AUTH ENDPOINTS
 export const endpoints = {
