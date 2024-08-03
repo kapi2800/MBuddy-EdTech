@@ -3,3 +3,4 @@ server/node_modules/
 server/.env
 server/.env.development
 server/.env.production
+.env
