@@ -43,8 +43,8 @@ export default function CourseReviewModal({ setReviewModal }) {
   }
 
   return (
-    <div className="fixed inset-0 z-[1000] !mt-0 grid h-screen w-screen place-items-center overflow-auto bg-white bg-opacity-10 backdrop-blur-sm">
-      <div className="my-10 w-11/12 max-w-[700px] rounded-lg border border-richblack-400 bg-richblack-800">
+    <div className="fixed inset-0 z-[1000] grid h-screen w-screen place-items-center overflow-auto bg-white bg-opacity-10 backdrop-blur-sm">
+      <div className="w-11/12 max-w-[700px] rounded-lg border border-richblack-400 bg-richblack-800 sm:w-full sm:max-w-full">
         {/* Modal Header */}
         <div className="flex items-center justify-between rounded-t-lg bg-richblack-700 p-5">
           <p className="text-xl font-semibold text-richblack-5">Add Review</p>
@@ -54,13 +54,13 @@ export default function CourseReviewModal({ setReviewModal }) {
         </div>
         {/* Modal Body */}
         <div className="p-6">
-          <div className="flex items-center justify-center gap-x-4">
+          <div className="flex items-center justify-start gap-x-4 sm:flex-col sm:items-center">
             <img
               src={user?.image}
-              alt={user?.firstName + "profile"}
-              className="aspect-square w-[50px] rounded-full object-cover"
+              alt={user?.firstName + " profile"}
+              className="aspect-square w-[50px] rounded-full object-cover sm:w-[40px]"
             />
-            <div className="">
+            <div className="text-center sm:text-left">
               <p className="font-semibold text-richblack-5">
                 {user?.firstName} {user?.lastName}
               </p>
@@ -77,7 +77,7 @@ export default function CourseReviewModal({ setReviewModal }) {
               size={24}
               activeColor="#ffd700"
             />
-            <div className="flex w-11/12 flex-col space-y-2">
+            <div className="flex w-full flex-col space-y-2">
               <label
                 className="text-sm text-richblack-5"
                 htmlFor="courseExperience"
@@ -88,7 +88,7 @@ export default function CourseReviewModal({ setReviewModal }) {
                 id="courseExperience"
                 placeholder="Add Your Experience"
                 {...register("courseExperience", { required: true })}
-                className="form-style resize-x-none min-h-[130px] w-full"
+                className="form-style resize-none min-h-[130px] w-full"
               />
               {errors.courseExperience && (
                 <span className="ml-2 text-xs tracking-wide text-pink-200">
@@ -96,10 +96,10 @@ export default function CourseReviewModal({ setReviewModal }) {
                 </span>
               )}
             </div>
-            <div className="mt-6 flex w-11/12 justify-end gap-x-2">
+            <div className="mt-6 flex w-full justify-end gap-x-2">
               <button
                 onClick={() => setReviewModal(false)}
-                className={`flex cursor-pointer items-center gap-x-2 rounded-md bg-richblack-300 py-[8px] px-[20px] font-semibold text-richblack-900`}
+                className={`flex cursor-pointer items-center gap-x-2 rounded-md bg-richblack-300 py-2 px-4 font-semibold text-richblack-900 sm:w-full sm:text-center`}
               >
                 Cancel
               </button>

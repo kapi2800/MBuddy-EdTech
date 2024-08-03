@@ -17,11 +17,11 @@ export default function ViewCourse() {
   const { token } = useSelector((state) => state.auth)
   const dispatch = useDispatch()
   const [reviewModal, setReviewModal] = useState(false)
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
 
   useEffect(() => {
     ;(async () => {
       const courseData = await getFullDetailsOfCourse(courseId, token)
-      // console.log("Course Data here... ", courseData.courseDetails)
       dispatch(setCourseSectionData(courseData.courseDetails.courseContent))
       dispatch(setEntireCourseData(courseData.courseDetails))
       dispatch(setCompletedLectures(courseData.completedVideos))
@@ -32,15 +32,32 @@ export default function ViewCourse() {
       dispatch(setTotalNoOfLectures(lectures))
     })()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [courseId, token, dispatch])
 
   return (
     <>
       <div className="relative flex min-h-[calc(100vh-3.5rem)]">
-        <VideoDetailsSidebar setReviewModal={setReviewModal} />
-        <div className="h-[calc(100vh-3.5rem)] flex-1 overflow-auto">
-          <div className="mx-6">
-            <Outlet />
+        <div
+          className={`fixed top-30 left-0 h-full bg-richblack-800 transition-transform duration-300 ${
+            sidebarCollapsed ? "w-16" : "w-full md:w-80"
+          }`}
+          style={{ zIndex: 1000 }}
+        >
+          <VideoDetailsSidebar
+            setReviewModal={setReviewModal}
+            onToggle={() => setSidebarCollapsed((prev) => !prev)}
+            isCollapsed={sidebarCollapsed}
+          />
+        </div>
+        <div
+          className={`flex-1 transition-transform duration-300 ${
+            sidebarCollapsed ? "ml-16" : "ml-0"
+          }`}
+        >
+          <div className="h-[calc(100vh-3.5rem)] overflow-auto">
+            <div className="mx-6">
+              <Outlet />
+            </div>
           </div>
         </div>
       </div>

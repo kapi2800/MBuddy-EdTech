@@ -240,3 +240,22 @@ details > summary::-webkit-details-marker {
 .section_heading {
   @apply text-2xl font-bold text-richblack-5 lg:text-4xl;
 }
+
+/* Add these styles to your CSS file */
+@media (max-width: 768px) {
+  .sidebar-collapsed {
+    width: 4rem; /* Adjust as needed */
+  }
+  
+  .sidebar-expanded {
+    width: 100%;
+  }
+  
+  .content-collapsed {
+    margin-left: 4rem; /* Adjust as needed */
+  }
+  
+  .content-expanded {
+    margin-left: 0;
+  }
+}
