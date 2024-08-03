@@ -3,6 +3,7 @@ const mailsender = require("../utils/mailSender");
 const bcrypt=require("bcrypt");
 const crypto=require("crypto"); 
 const dotenv=require("dotenv");
+dotenv.config();
 const FRONTEND_URL=process.env.FRONTEND_URL;
 
 // reset password

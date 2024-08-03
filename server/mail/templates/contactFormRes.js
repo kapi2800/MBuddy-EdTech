@@ -1,3 +1,7 @@
+const dotenv = require("dotenv");
+
+dotenv.config();
+const FRONTEND_URL=process.env.FRONTEND_URL;
 exports.contactUsEmail = (
     email,
     firstname,
@@ -74,7 +78,7 @@ exports.contactUsEmail = (
     
     <body>
         <div class="container">
-            <a href="https://studynotion-edtech-project.vercel.app"><img class="logo"
+            <a href="${FRONTEND_URL}"><img class="logo"
                     src="https://i.ibb.co/7Xyj3PC/logo.png" alt="StudyNotion Logo"></a>
             <div class="message">Contact Form Confirmation</div>
             <div class="body">

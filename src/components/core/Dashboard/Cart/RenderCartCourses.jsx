@@ -2,12 +2,12 @@ import { FaStar } from "react-icons/fa"
 import { RiDeleteBin6Line } from "react-icons/ri"
 import ReactStars from "react-rating-stars-component"
 import { useDispatch, useSelector } from "react-redux"
-
 import { removeFromCart } from "../../../../slices/cartSlice"
 
 export default function RenderCartCourses() {
   const { cart } = useSelector((state) => state.cart)
   const dispatch = useDispatch()
+
   return (
     <div className="flex flex-1 flex-col">
       {cart.map((course, indx) => (
@@ -21,7 +21,7 @@ export default function RenderCartCourses() {
             <img
               src={course?.thumbnail}
               alt={course?.courseName}
-              className="h-[148px] w-[220px] rounded-lg object-cover"
+              className="h-[148px] w-full rounded-lg object-cover sm:w-[220px]"
             />
             <div className="flex flex-col space-y-1">
               <p className="text-lg font-medium text-richblack-5">

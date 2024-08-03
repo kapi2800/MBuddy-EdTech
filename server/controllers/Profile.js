@@ -36,7 +36,7 @@ exports.updateProfile = async (req, res) => {
     profile.gender = gender
 
     // Save the updated profile
-    await profile.save()
+    await profile.save();
 
     // Find the updated user details
     const updatedUserDetails = await User.findById(id)

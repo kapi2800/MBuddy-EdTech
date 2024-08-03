@@ -61,6 +61,7 @@ export function updateProfile(token, formData) {
       dispatch(
         setUser({ ...response.data.updatedUserDetails, image: userImage })
       )
+      localStorage.setItem("user",JSON.stringify({ ...response.data.updatedUserDetails, image: userImage }));
       toast.success("Profile Updated Successfully")
     } catch (error) {
       console.log("UPDATE_PROFILE_API API ERROR............", error)

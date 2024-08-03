@@ -13,8 +13,8 @@ const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
 
 dotenv.config();
-const PORT = process.env.PORT || 4000;
 const FRONTEND_URL=process.env.FRONTEND_URL;
+const PORT = process.env.PORT || 4000;
 
 //database connect
 database.connect();
