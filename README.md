@@ -37,7 +37,7 @@ StudyNotion is an online platform where students can buy courses and make real-l
 
 ### Instructor Dashboard
 
-(![Instructor Dashboard](Screenshot%(81).png))
+(![Instructor Dashboard]([Screenshot%(81).png](https://github.com/Mayankjoshi9/StudyNotion-EdTech/blob/main/Screenshot%20(81).png)))
 
 ## Installation
 
