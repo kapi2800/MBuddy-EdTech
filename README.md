@@ -32,11 +32,11 @@ StudyNotion is an online platform where students can buy courses and make real-l
 
 ### Home Page
 
-![Home Page]("C:\Users\mayan\OneDrive\Pictures\Screenshots\Screenshot 2024-07-30 130923.png")
+![Home Page](".\Screenshot 2024-07-30 130923.png")
 
 ### Instructor Dashboard
 
-![Instructor Dashboard]("C:\Users\mayan\OneDrive\Pictures\Screenshots\Screenshot (81).png")
+![Instructor Dashboard](".\Screenshot (81).png")
 
 ## Installation
 
