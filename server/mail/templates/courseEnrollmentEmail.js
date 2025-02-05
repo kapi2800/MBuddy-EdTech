@@ -71,7 +71,7 @@ exports.courseEnrollmentEmail = (courseName, name) => {
     
     <body>
         <div class="container">
-            <a href="${FRONTEND_URL}"><img class="logo" src="https://i.ibb.co/7Xyj3PC/logo.png"
+            <a href="${FRONTEND_URL}"><img class="logo" src="./src/assets/Logo/rzp_logo.png"
                     alt="StudyNotion Logo"></a>
             <div class="message">Course Registration Confirmation</div>
             <div class="body">

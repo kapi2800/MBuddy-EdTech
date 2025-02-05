@@ -29,7 +29,13 @@ function LoginForm() {
     dispatch(login(email, password, navigate))
   }
 
+  const handleGuest=(e)=>{
+    e.preventDefault();
+    dispatch(login("jicexe9095@eluxeer.com","jicexe9095@eluxeer.com",navigate));
+  }
+
   return (
+    <div>
     <form
       onSubmit={handleOnSubmit}
       className="mt-6 flex w-full flex-col gap-y-4"
@@ -89,7 +95,16 @@ function LoginForm() {
       >
         Sign In
       </button>
+      
     </form>
+    <button
+        onClick={handleGuest}
+        className="mt-6 w-full rounded-[8px] bg-white py-[8px] px-[12px] font-medium text-black"
+      >
+        Continue As Guest
+      </button>
+    </div>
+    
   )
 }
 

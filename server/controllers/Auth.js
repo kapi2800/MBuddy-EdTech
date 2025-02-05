@@ -275,7 +275,7 @@ exports.changePassword = async (req, res) => {
                     `Password updated successfully for ${updatedUserDetails.firstName} ${updatedUserDetails.lastName}`
                 )
             )
-            console.log("Email sent successfully:", emailResponse.response)
+            console.log("Email sent successfully:", emailResponse)
 
             
         } catch (error) {

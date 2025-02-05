@@ -1,4 +1,4 @@
-import React from 'react'
+
 // Image and Video Import
 import Banner from "../assets/Images/banner.mp4"
 

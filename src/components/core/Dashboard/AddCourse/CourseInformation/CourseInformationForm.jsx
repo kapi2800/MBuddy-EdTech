@@ -117,7 +117,7 @@ export default function CourseInformationForm() {
       }
       return
     }
-
+    console.log(data)
     const formData = new FormData()
     formData.append("courseName", data.courseTitle)
     formData.append("courseDescription", data.courseShortDesc)
@@ -263,12 +263,14 @@ export default function CourseInformationForm() {
         getValues={getValues}
         errors={errors}
         register={register}
+        name={"courseRequirements"}
+        label={"requirements"}
       />
       <div className="flex justify-end space-x-3">
         <IconBtn
           type="submit"
           loading={loading}
-          label={
+          text={
             <>
               <span className="text-sm">Next</span>{" "}
               <MdNavigateNext className="text-lg" />

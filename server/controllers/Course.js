@@ -460,7 +460,10 @@ exports.deleteCourse = async (req, res) => {
     if (!course) {
       return res.status(404).json({ message: "Course not found" })
     }
-
+    await Category.updateMany(
+      { courses: courseId }, 
+      { $pull: { courses: courseId } } // Remove course reference
+    );
     // Unenroll students from the course
     const studentsEnrolled = course.studentsEnrolled
     for (const studentId of studentsEnrolled) {
@@ -487,6 +490,7 @@ exports.deleteCourse = async (req, res) => {
 
     // Delete the course
     await Course.findByIdAndDelete(courseId)
+
 
     return res.status(200).json({
       success: true,

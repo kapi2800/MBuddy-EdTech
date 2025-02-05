@@ -135,32 +135,32 @@ export default function NestedView({ handleChangeEditSectionName }) {
           </details>
         ))}
       </div>
-      {confirmationModal && (
-        <ConfirmationModal
-          text1={confirmationModal.text1}
-          text2={confirmationModal.text2}
-          btn1Text={confirmationModal.btn1Text}
-          btn2Text={confirmationModal.btn2Text}
-          btn1Handler={confirmationModal.btn1Handler}
-          btn2Handler={confirmationModal.btn2Handler}
-        />
-      )}
-      {addSubSection && (
+      {addSubSection ? (
         <SubSectionModal
-          mode="add"
-          setModalVisible={setAddSubsection}
-          addSubSection={addSubSection}
+          modalData={addSubSection}
+          setModalData={setAddSubsection}
+          add={true}
         />
-      )}
-      {viewSubSection && (
-        <SubSectionModal mode="view" setModalVisible={setViewSubSection} viewSubSection={viewSubSection} />
-      )}
-      {editSubSection && (
+      ) : viewSubSection ? (
         <SubSectionModal
-          mode="edit"
-          setModalVisible={setEditSubSection}
-          editSubSection={editSubSection}
+          modalData={viewSubSection}
+          setModalData={setViewSubSection}
+          view={true}
         />
+      ) : editSubSection ? (
+        <SubSectionModal
+          modalData={editSubSection}
+          setModalData={setEditSubSection}
+          edit={true}
+        />
+      ) : (
+        <></>
+      )}
+      {/* Confirmation Modal */}
+      {confirmationModal ? (
+        <ConfirmationModal modalData={confirmationModal} />
+      ) : (
+        <></>
       )}
     </>
   );
