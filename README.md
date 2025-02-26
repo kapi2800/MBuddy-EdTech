@@ -1,4 +1,3 @@
-
 ---
 
 # MBuddy
@@ -34,11 +33,9 @@ MBuddy is an online platform where students can buy courses and make real-life p
 
 ![Home Page](Screenshot%202024-07-30%20130923.png)
 
-
 ### Instructor Dashboard
 
 ![Instructor Dashboard](Screenshot%20%2881%29.png)
-
 
 ## Installation
 
@@ -93,3 +90,4 @@ Please ensure your code follows our coding standards and includes appropriate te
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ---
+
