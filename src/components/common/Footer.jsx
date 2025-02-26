@@ -3,7 +3,7 @@ import { FooterLink2 } from "../../data/footer-links";
 import { Link } from "react-router-dom";
 
 // Images
-import Logo from "../../assets/Logo/Logo-Full-Light.png";
+import Logo from "../../assets/Logo/logo.jpg";
 
 // Icons
 import { FaFacebook, FaGoogle, FaTwitter, FaYoutube } from "react-icons/fa";
@@ -172,7 +172,7 @@ const Footer = () => {
             })}
           </div>
 
-          <div className="text-center">Made By ❤️ Mayank  © 2023 Studynotion</div>
+          <div className="text-center">Made By ❤️ Mayank  © 2023 MBuddy</div>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import { apiConnector } from '../services/apiconnector';
 import { categories } from '../services/apis';
 import { getCatalogaPageData } from '../services/operations/pageAndComponentData';
-import Course_Card from '../components/core/Catalog/Course_Card';
+import CourseCard from '../components/core/Catalog/CourseCard';
 import CourseSlider from '../components/core/Catalog/CourseSlider';
 import { useSelector } from "react-redux"
 import Error from "./Error"
@@ -12,8 +12,8 @@ import Error from "./Error"
 const Catalog = () => {
 
     const { loading } = useSelector((state) => state.profile)
-  const { catalogName } = useParams()
-  const [active, setActive] = useState(1)
+    const { catalogName } = useParams()
+    const [active, setActive] = useState(1)
     const [catalogPageData, setCatalogPageData] = useState(null);
     const [categoryId, setCategoryId] = useState("");
 
@@ -32,7 +32,7 @@ const Catalog = () => {
         const getCategoryDetails = async() => {
             try{
                 const res = await getCatalogaPageData(categoryId);
-                console.log("PRinting res: ", res);
+                // console.log("PRinting res: ", res);
                 setCatalogPageData(res);
             }
             catch(error) {
@@ -128,7 +128,7 @@ const Catalog = () => {
                 {catalogPageData?.data?.mostSellingCourses
                   ?.slice(0, 4)
                   .map((course, i) => (
-                    <Course_Card course={course} key={i} Height={"h-[250px] md:h-[350px]"} />
+                    <CourseCard course={course} key={i} Height={"h-[250px] md:h-[350px]"} />
                   ))}
               </div>
             </div>

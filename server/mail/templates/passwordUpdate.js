@@ -60,7 +60,7 @@ exports.passwordUpdated = (email, name) => {
     <body>
         <div class="container">
             <a href="${FRONTEND_URL}"><img class="logo"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw4weqxqEww-yOStWXXgSsrIxn4hfkZT3kEg&s" alt="StudyNotion Logo"></a>
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw4weqxqEww-yOStWXXgSsrIxn4hfkZT3kEg&s" alt="MBuddy Logo"></a>
             <div class="message">Password Update Confirmation</div>
             <div class="body">
                 <p>Hey ${name},</p>
@@ -70,7 +70,7 @@ exports.passwordUpdated = (email, name) => {
             </div>
             <div class="support">If you have any questions or need further assistance, please feel free to reach out to us
                 at
-                <a href="mailto:info@studynotion.com">info@studynotion.com</a>. We are here to help!
+                <a href="mailto:info@MBuddy.com">info@MBuddy.com</a>. We are here to help!
             </div>
         </div>
     </body>

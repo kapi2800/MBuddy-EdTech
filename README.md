@@ -1,11 +1,11 @@
 
 ---
 
-# StudyNotion
+# MBuddy
 
 ## Overview
 
-StudyNotion is an online platform where students can buy courses and make real-life payments using Razorpay. Instructors can create and sell courses across various categories. The platform is built using the MERN stack and Create React App.
+MBuddy is an online platform where students can buy courses and make real-life payments using Razorpay. Instructors can create and sell courses across various categories. The platform is built using the MERN stack and Create React App.
 
 ## Table of Contents
 
@@ -44,8 +44,8 @@ StudyNotion is an online platform where students can buy courses and make real-l
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/StudyNotion.git
-   cd StudyNotion
+   git clone https://github.com/yourusername/MBuddy.git
+   cd MBuddy
    ```
 
 2. Install dependencies:

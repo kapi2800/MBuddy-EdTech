@@ -1,7 +1,7 @@
 import { toast } from "react-hot-toast";
 import { studentEndpoints } from "../apis";
 import { apiConnector } from "../apiconnector";
-import rzpLogo from "../../assets/Logo/rzp_logo.png"
+import rzpLogo from "../../assets/Logo/logo.jpg"
 import { setPaymentLoading } from "../../slices/courseSlice";
 import { resetCart } from "../../slices/cartSlice";
 
@@ -57,7 +57,7 @@ export async function buyCourse(token, courses, userDetails, navigate, dispatch)
             currency: orderResponse.data.message.currency,
             amount: `${orderResponse.data.message.amount}`,
             order_id:orderResponse.data.message.id,
-            name:"StudyNotion",
+            name:"MBuddy",
             description: "Thank You for Purchasing the Course",
             image:rzpLogo,
             prefill: {
@@ -117,7 +117,7 @@ async function verifyPayment(bodyData, token, navigate, dispatch) {
         if(!response.data.success) {
             throw new Error(response.data.message);
         }
-        toast.success("payment Successful, ypou are addded to the course");
+        toast.success("payment Successful, you are addded to the course");
         navigate("/dashboard/enrolled-courses");
         dispatch(resetCart());
     }   

@@ -79,7 +79,7 @@ exports.contactUsEmail = (
     <body>
         <div class="container">
             <a href="${FRONTEND_URL}"><img class="logo"
-                    src="./src/assets/Logo/rzp_logo.png" alt="StudyNotion Logo"></a>
+                    src="./src/assets/Logo/logo.jpg" alt="MBuddy Logo"></a>
             <div class="message">Contact Form Confirmation</div>
             <div class="body">
                 <p>Dear ${firstname} ${lastname},</p>
@@ -93,7 +93,7 @@ exports.contactUsEmail = (
                 <p>We appreciate your interest and will get back to you shortly. </p>
             </div>
             <div class="support">If you have any further questions or need immediate assistance, please feel free to reach
-                out to us at <a href="mailto:info@studynotion.com">info@studynotion.com</a>. We are here to help!</div>
+                out to us at <a href="mailto:info@MBuddy.com">info@MBuddy.com</a>. We are here to help!</div>
         </div>
     </body>
     
