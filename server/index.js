@@ -9,6 +9,7 @@ const database = require("./config/database");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const {cloudinaryConnect } = require("./config/cloudinary");
+const path = require("path");
 const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
 
@@ -23,6 +24,12 @@ database.connect();
 //middlewares
 app.use(express.json());
 app.use(cookieParser());
+
+// In your Express server
+app.get('*', (req, res) => {
+	res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+  });
+  
 
 app.use(
   cors({
