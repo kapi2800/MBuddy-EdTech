@@ -28,12 +28,13 @@ app.use(cookieParser());
 
 
 
+
 // Serving static files from the React build folder
-app.use(express.static(path.join(__dirname, '../build'))); // Adjust path to point to /client/build
+app.use(express.static(path.join(__dirname, './build'))); // Adjust path to point to /client/build
 
 // Catch-all route to serve index.html for any other route
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../build', 'index.html')); // Same adjustment for index.html
+  res.sendFile(path.resolve(__dirname, './build', 'index.html')); // Same adjustment for index.html
 });
 
   
