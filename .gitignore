@@ -4,3 +4,4 @@ server/.env
 server/.env.development
 server/.env.production
 .env
+build/
