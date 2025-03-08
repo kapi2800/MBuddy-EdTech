@@ -34,10 +34,10 @@ function App() {
 
   // const dispatch = useDispatch();
   // const navigate = useNavigate();
-  
+
   const { user } = useSelector((state) => state.profile)
 
-  
+
   return (
     <div className="w-screen min-h-screen bg-richblack-900 flex flex-col font-inter">
       <Navbar />
@@ -88,7 +88,7 @@ function App() {
               <UpdatePassword />
             </OpenRoute>
           }
-        /> 
+        />
 
         <Route
           path="/about"
@@ -97,8 +97,8 @@ function App() {
             <About />
 
           }
-        /> 
-         <Route path="/contact" element={<Contact />} />
+        />
+        <Route path="/contact" element={<Contact />} />
 
         <Route
           element={
@@ -154,11 +154,16 @@ function App() {
             )
           }
 
-        </Route> 
+        </Route>
+
+        <Route
+          path="*"
+          element={
+            <Error />
+          }
+        />
 
 
-
-        
 
 
       </Routes>

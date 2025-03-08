@@ -31,7 +31,7 @@ function LoginForm() {
 
   const handleGuest=(e)=>{
     e.preventDefault();
-    dispatch(login("jicexe9095@eluxeer.com","jicexe9095@eluxeer.com",navigate));
+    dispatch(login("rovihas597@eluxeer.com","rovihas597@eluxeer.com",navigate));
   }
 
   return (
